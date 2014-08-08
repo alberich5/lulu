@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lulu</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<nav class="navbar" >
+	<div class='navbar-inner'>
+		<ul class='nav'>
+			<li><%= link_to 'Inicio', root_path %></li>
+			<li><%= link_to 'Posts', posts_path %></li>
+		</ul>
+	</div>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

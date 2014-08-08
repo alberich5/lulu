@@ -1,0 +1,22 @@
+<h1>Publicaciones</h1>
+
+<ul class='thumbnails' id="posts">
+  <% @posts.each do |post| %>
+    <div id="posts">
+        <li class='span3'>
+          <div class='thumbnail'>
+              <% if post.has_photo? %>
+                 <%= image_tag post.photo_path %>
+             <% end %>
+             <div class='caption'>
+              <h3><%= link_to post.titulo, post %></h3>
+             </div>
+          </div>
+        </li>
+      </div>
+  <% end %>
+</ul>
+
+<br>
+
+<%= link_to 'Nueva publicacion', new_post_path %>
